@@ -1,0 +1,45 @@
+## YAML Template.
+---
+
+academic:
+    - year: 2014
+      name: 2014/15
+      start: &SS 2014-09-01
+      terms:
+        1:
+            name: autumn
+            start: *SS
+            end: 2014-12-10
+        2:
+            name: spring
+            start: 2015-01-04
+            end: 2015-04-15
+    
+    - year: 2015
+      name: 2015/16
+      start: &SS 2015-09-05
+      terms:
+        1:
+            name: autumn
+            start: 2015-09-01
+            end: 2015-12-08
+        2:
+            name: spring
+            start: 2016-01-05
+            end: 2016-04-17
+    - year: 2016
+      name: 2016/17
+      start: &SS 2016-09-01
+      terms:
+        1:
+            name: first_trimester
+            start: *SS
+            end: 2016-10-28
+        2:
+            name: second_trimester
+            start: 2016-11-01
+            end: 2017-01-20
+        3:
+            name: third_trimester
+            start: 2017-01-28
+            end: 2017-04-19

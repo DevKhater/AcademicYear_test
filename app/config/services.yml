@@ -1,0 +1,17 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/book/service_container.html
+parameters:
+    academic_manager.class: AppBundle\Academic\AcademicManager
+    academic_factory.class: AppBundle\Academic\AcademicFactory
+
+services:
+    academic_manager.factory:
+        class: %academic_factory.class%
+    academic_manager:
+        class:          %academic_manager.class%
+        factory_class:  %academic_factory.class%
+        factory_service:  academic_manager.factory
+        #factory_method: load
+    
+    appbundle.util.inflector:
+      class: AppBundle\Util\Inflector\NoopInflector 
